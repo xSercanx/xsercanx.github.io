@@ -1,0 +1,96 @@
+// project card template with carousel
+<div id="portfolio-website-project" class="project-box-container">
+    <div class="project-background-image">
+        <div class="project-title">
+            This website itself
+        </div>
+        <div class="project-body">
+            <div class="project-graphics">
+                <div class="carousel-wrapper">
+                    <div class="carousel-buttons-container">
+                        <div class="carousel-left-button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" >
+                                <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
+                            </svg>
+                        </div>
+                        <div class="carousel-button-filler"></div>
+                        <div class="carousel-right-button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" >
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <picture>
+                                    <source srcset="../images/website-html-1920w.png" 
+                                    media="(width > 1360px)">
+                                    <source srcset="../images/website-html-1360w.png, ../images/website-html-1920w.png 1.5x" 
+                                    media="(width > 1024px)">
+                                    <source srcset="../images/website-html-1024w.png, ../images/website-html-1360w.png 1.5x, ../images/website-html-1920w.png 3x" 
+                                    media="(width > 768px)">
+                                    <source srcset="../images/website-html-768w.png, ../images/website-html-1024w.png 1.5x, ../images/website-html-1360w.png 3x" 
+                                    media="(width > 480px)">
+                                    <img srcset="../images/website-html-480w.png, ../images/website-html-768w.png 1.5x, ../images/website-html-1024w.png 3x" 
+                                    alt="Website html">
+                                </picture>
+                                <div class="carousel-picture-text">HTML</div>
+                            </div>
+                        </div>
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <picture>
+                                    <source srcset="../images/website-css-1920w.png" 
+                                    media="(width > 1360px)">
+                                    <source srcset="../images/website-css-1360w.png, ../images/website-css-1920w.png 1.5x" 
+                                    media="(width > 1024px)">
+                                    <source srcset="../images/website-css-1024w.png, ../images/website-css-1360w.png 1.5x, ../images/website-css-1920w.png 3x" 
+                                    media="(width > 768px)">
+                                    <source srcset="../images/website-css-768w.png, ../images/website-css-1024w.png 1.5x, ../images/website-css-1360w.png 3x" 
+                                    media="(width > 480px)">
+                                    <img srcset="../images/website-css-480w.png, ../images/website-css-768w.png 1.5x, ../images/website-css-1024w.png 3x" 
+                                    alt="Website css">
+                                </picture>
+                                <div class="carousel-picture-text">CSS</div>
+                            </div>
+                        </div>
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <picture>
+                                    <source srcset="../images/website-javascript-1920w.png" 
+                                    media="(width > 1360px)">
+                                    <source srcset="../images/website-javascript-1360w.png, ../images/website-javascript-1920w.png 1.5x" 
+                                    media="(width > 1024px)">
+                                    <source srcset="../images/website-javascript-1024w.png, ../images/website-javascript-1360w.png 1.5x, ../images/website-javascript-1920w.png 3x" 
+                                    media="(width > 768px)">
+                                    <source srcset="../images/website-javascript-768w.png, ../images/website-javascript-1024w.png 1.5x, ../images/website-javascript-1360w.png 3x" 
+                                    media="(width > 480px)">
+                                    <img srcset="../images/website-javascript-480w.png, ../images/website-javascript-768w.png 1.5x, ../images/website-javascript-1024w.png 3x" 
+                                    alt="Website javaScript">
+                                </picture>
+                                <div class="carousel-picture-text">JavaScript</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item-selector-container preview"></div>
+                </div>
+            </div>
+            <div class="project-text">
+                <div class="project-description">
+                    description
+                    <br/>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint.
+                </div>
+                <div class="project-comment">
+                    very good chance to learn more about web development
+                    <br/>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus laborum in, voluptatem officia excepturi sed laboriosam quis quas natus at reprehenderit. Dolor ad repellat quis, quod expedita iste sint.
+                </div> 
+            </div>                         
+        </div>
+        <div class="project-addition">
+            addition
+        </div>  
+    </div>
+</div>

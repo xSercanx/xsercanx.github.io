@@ -1,0 +1,708 @@
+@import "carousel.css";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(24, 25, 27);
+}
+
+
+/**********/
+/* Header */
+/**********/
+header {
+    position: sticky;
+    top: 0px;
+
+    z-index: 9999;
+}
+
+
+/***************/
+/* Header menu */
+/***************/
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(36, 53, 107);
+    border-bottom: 1px rgb(173, 185, 185) solid;
+}
+.nav-bar-small-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu-small-button-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: stretch;
+    transition: background-color 0.2s;
+}
+#nav-menu-small-button {
+    width: fit-content;
+    padding: 5px;
+    transition: background-color 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+    #nav-menu-small-button:hover {
+        background-color: rgb(60, 105, 164);
+    }
+    #nav-menu-small-button > svg {
+        fill: azure;
+        display: grid;
+        height: 28px;
+        width: 28px;
+    }    
+
+
+/****************/
+/* Header title */
+/****************/
+.nav-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: stretch;
+    min-width: fit-content;
+    transition: background-color 0.2s;
+}
+.nav-title-text {
+    height: 100%;
+    padding: 0px 10px 0px;
+    align-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: center;
+}
+    .nav-title-text:hover {
+        background-color: rgb(60, 105, 164);
+    }
+
+
+/**********************/
+/* Header area filler */
+/**********************/
+.nav-filler {
+    display: none;
+}
+
+
+/**************************/
+/* Header navigation area */
+/**************************/
+.nav-bar-grouped {
+    display: none; /* changed in javascript */
+    flex-direction: column;
+    width: 100%;
+}
+.nav-bar {
+    height: stretch;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+    .nav-bar > .nav-bar-item {
+        display: none;
+    }
+.nav-bar-item {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid black;
+    transition: background-color 0.2s;
+}
+    .nav-bar-item:hover {
+        background-color: rgb(60, 105, 164);
+    }
+
+
+/*****************************/
+/* Header translation button */
+/*****************************/
+.dropdown-button {
+    width: fit-content;
+    padding: 5px;
+    transition: background-color 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+    #dropdown-button:hover, #dropdown-button.selected {
+        background-color: rgba(74, 103, 162);
+    }
+.dropdown-button-text {
+    display: none;
+}
+.dropdown-button-icon {
+    fill: azure;
+}
+    .dropdown-button-icon > svg {
+        display: grid;
+        height: 28px;
+        width: 28px;
+    }
+.dropdown-content {
+    width: 200px;
+    padding: 13px;
+    position: absolute;
+    right: 0px;
+    display: none;
+    border: 1px azure solid;
+    background-color: rgb(36, 53, 107);
+    z-index: 1;
+}
+.dropdown-item {
+    width: 100%;
+    padding: 4px;
+    justify-self: center;
+    background-color: rgb(36, 53, 107);
+    cursor: pointer;
+}
+    .dropdown-item:hover, .dropdown-item.selected {
+        background-color: rgba(74, 103, 162);
+    }
+    
+
+/***********/
+/* Content */
+/***********/
+.content-header {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px rgb(173, 185, 185) solid;
+    background-color: rgb(54, 55, 57);
+}
+.content-container {
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+
+/*****************/
+/* Contacts html */
+/*****************/
+.contacts-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: min(100%, 100rem);
+}
+.contact-item-container {
+    margin: 10px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration-line: none;
+    font-size: 2rem;
+    fill: azure;
+    border-radius: 5px;
+    background-color: rgb(36, 53, 107);
+}
+    .contact-item-container:hover {
+        background-color: rgb(58, 79, 149);
+    }
+.contact-item-icon {
+    display: grid;
+}
+.contact-item-extern-icon-svg {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    bottom: 25px;
+    left: 28px;
+    padding: 2px;
+    border: 1px rgb(54, 55, 57) solid;
+    border-radius: 2px;
+    fill: rgb(54, 55, 57);
+
+    background-color: azure;
+}
+.contact-item-icon-svg {
+    width: 32px;
+    height: 32px;
+}
+.contact-item-text {
+    display: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/***************/
+/* Footer area */
+/***************/
+footer {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(36, 53, 107);
+}
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-nav-item {
+    width: 100%;
+    padding: 16px 0px 16px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #cccccc;
+}
+    .footer-nav-item:hover {
+        color: azure;
+    }
+    
+
+/***********************/
+/* Portfolio container */
+/***********************/
+#portfolio-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*****************/
+/* Projects html */
+/*****************/
+.project-box-container {
+    box-sizing: border-box;
+    width:  min(100%, 100rem);
+    height: 100%;
+
+    margin: 2rem auto auto;
+}
+.project-background-image {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(36, 53, 107); /* if no background img */
+}
+.project-title {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: rgb(44, 44, 44) 0rem 0rem 0.5rem;
+}
+.project-body {
+    box-sizing: border-box;
+    padding: 0.1rem;
+    display: flex;
+    flex-direction: column;
+}
+.project-graphics {
+    box-sizing: border-box;
+    min-width: 0px;
+    
+    width: 100%;
+}
+.project-graphics > picture {
+    box-sizing: border-box;
+    aspect-ratio: 16/9;
+    display: grid;
+    object-fit: contain;
+
+    height: 100%;
+    width: 100%;
+}
+.project-text {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: fit-content;
+    flex: 0 0 50%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.project-description {
+    width: 100%;
+
+    font-size: 1rem;
+}
+.project-comment {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+.project-addition {
+    width: 100%;
+    padding: 0.25rem;
+}
+
+
+/************************/
+/* Portfolio containers */
+/************************/
+#portfolio-website-project .project-background-image {
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(24, 25, 27),
+        rgb(24, 25, 27) 150px,
+        rgb(36, 53, 107) 150px,
+        rgb(36, 53, 107) 525px,
+        rgb(173, 185, 185) 525px,
+        rgb(173, 185, 185) 575px,
+        rgb(60, 105, 164) 575px,
+        rgb(60, 105, 164) 700px);
+}
+#godot-courses .project-background-image {
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(71, 140, 191),
+        rgb(71, 140, 191) 150px,
+        rgb(65, 64, 66) 150px,
+        rgb(65, 64, 66) 525px);
+}
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-320w.png);
+    background-size: cover;
+}
+#anki-flashcard-project .project-background-image {
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(128, 233, 221),
+        rgb(128, 233, 221) 150px,
+        rgb(44, 44, 44) 150px,
+        rgb(44, 44, 44) 525px,
+        rgb(255, 255, 255) 525px,
+        rgb(255, 255, 255) 775px,
+        rgb(217, 241, 239) 775px,
+        rgb(217, 241, 239) 900px);
+}
+#physics-bachelor-simulations .project-background-image {
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(24, 25, 27),
+        rgb(24, 25, 27) 50px,
+        rgb(36, 53, 107) 50px,
+        rgb(36, 53, 107) 75px,
+        rgb(173, 185, 185) 75px,
+        rgb(173, 185, 185) 450px);
+}
+
+
+
+.absolute {
+    position: absolute;
+}
+
+/************/
+/* carousel */
+/************/
+.carousel-picture-text {
+    padding: 0.25rem 0.5rem;
+    min-width: 0px;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0rem;
+    z-index: 5;
+    background-color: blue;
+}
+
+/********/
+/* Home */
+/********/
+.index-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.site-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 100rem);
+    height: 100%;
+    gap: 2rem;
+    margin: 1rem auto auto;
+}
+.site-picture {
+    box-sizing: border-box;
+    align-self: center;
+    min-width: 0px;
+    width: 100%;
+}
+.site-picture a {
+    box-sizing: border-box;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    text-shadow: rgb(44, 44, 44) 0rem 0rem 0.5rem;
+}
+.site-picture div {
+    font-size: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    gap: 1rem;
+    border: 2px solid rgb(36, 53, 107);
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(24, 25, 27),
+        rgb(24, 25, 27) 150px,
+        rgb(36, 53, 107) 150px,
+        rgb(36, 53, 107) 525px,
+        rgb(173, 185, 185) 525px,
+        rgb(173, 185, 185) 575px,
+        rgb(60, 105, 164) 575px,
+        rgb(60, 105, 164) 700px);
+}
+    .site-picture div:hover {
+        border: 2px solid azure;
+    }
+.site-icon {
+    fill: azure;
+    height: 5rem;
+    width: 5rem;
+}
+
+
+/*********/
+/* About */
+/*********/
+#about-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.about-card {
+    box-sizing: border-box;
+    width:  min(100%, 100rem);
+    height: 100%;
+
+    margin: 1rem auto auto;
+    display: flex;
+    flex-direction: column;
+    
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(24, 25, 27),
+        rgb(24, 25, 27) 150px,
+        rgb(36, 53, 107) 150px,
+        rgb(36, 53, 107) 525px,
+        rgb(60, 105, 164) 525px,
+        rgb(60, 105, 164) 700px);
+    border: 1px solid rgb(60, 105, 164);
+}
+.about-graphics {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem;
+        
+    font-size: 15rem;
+}
+.about-graphics * {
+    width: 4rem;
+    height: 4rem;
+
+    fill: azure;
+}
+.about-text {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+#current-status {
+    border: 1px solid azure;
+}
+
+
+/*****************/
+/* Media queries */
+/*****************/
+
+/* 320px ~ 569px */
+/* 480px ~ 853px */
+/* 768px ~ 1365px break 432 */
+/* 1024px ~ 640px */
+@media screen and (min-width: 768px) {
+
+/***********************/
+/* Media (700): Header */
+/***********************/
+    .nav-container {
+        flex-direction: column;
+    }
+
+
+/***********************************/
+/* Media (700): Header menu button */
+/***********************************/
+    .nav-bar-small-menu {
+        width: 100%;
+    }
+    .nav-bar-grouped {
+        display: none;  /* changed in javascript */
+    }
+        .nav-bar > .nav-bar-item {
+            display: block;
+        }
+    .nav-menu-small-button-container {
+        display: none;
+    }
+
+/*****************************/
+/* Media (700): Header title */
+/*****************************/
+    .nav-title {
+        width: 100%;
+        justify-content: left;
+    }
+    .nav-title-text {
+        margin-left: 0.75rem;
+        font-size: 1.75rem;
+        text-align: left;
+    }
+
+/***********************************/
+/* Media (700): Header area filler */
+/***********************************/
+    .nav-filler{
+        display: block;
+        width: 100%;
+    }
+
+/***************************************/
+/* Media (700): Header navigation area */
+/***************************************/
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-bar-item {
+        width: 100%;
+        border-top: 0px;
+        font-size: 1.25rem;
+    }
+
+/***********************************/
+/* Media (700): Translation button */
+/***********************************/
+    .dropdown-button {
+        height: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;    
+        padding: 16px;
+    }
+    .dropdown-container {
+        height: stretch;
+        width: fit-content;
+    }
+    .dropdown-button-text {
+        text-wrap-mode: nowrap;
+        margin-left: 0.5rem;
+        display: block;
+        font-size: 1rem;
+    }
+
+
+/*****************************/
+/* Media (700): Contact html */
+/*****************************/
+    .contact-item-text {
+        display: block;
+    }
+    .contact-item-extern-icon-svg {
+        left: 225px;
+        bottom: 28px;
+    }
+    .contact-item-container {        
+        border-radius: 10px;
+    }
+
+/***********************/
+/* Media (700): Footer */
+/***********************/
+    .footer-nav-item {
+        width: 150px;
+    }
+
+    
+/*******************************/
+/* Project box container (700) */
+/*******************************/
+    .project-background-image {
+        padding: 2rem 2rem;
+    }
+
+
+/******************/
+/* carousel (700) */
+/******************/
+    .carousel-left-button, .carousel-right-button {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-480w.png);
+}}
+@media screen and (min-width: 768px) {
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-800w.png);
+}}
+@media screen and (min-width: 1024px) {
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-1024w.png);
+}
+.project-body { flex-direction: row; }
+.site-card { flex-direction: row; }
+.about-card { flex-direction: row; }
+}
+@media screen and (min-width: 1360px) {
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-1360w.png);
+}
+.project-graphics { flex: 0 0 75%; }
+.project-text { flex: 0 0 25%; }
+}
+@media screen and (min-width: 1920px) {
+#japanese-learning-project .project-background-image {
+    background-image: url(../images/japanese-learning-card-background-1920w.png);
+}}
