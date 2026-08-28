@@ -350,6 +350,12 @@ footer {
     margin-top: 0.5rem;
     font-size: 0.9rem;
 }
+    .project-comment > svg {
+        fill: azure;
+        height: 1.3rem;
+        width: 1.3rem;
+        padding-right: 0.2rem;
+    }
 .project-addition {
     width: 100%;
     padding: 0.25rem;
